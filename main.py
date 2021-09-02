@@ -101,3 +101,4 @@ while playing == True:
    print(bright_red + "\nHey, that wasn't an option, please choose one or two...")
    time.sleep(1)
    os.system('clear')
+
