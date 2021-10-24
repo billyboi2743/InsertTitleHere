@@ -1,4 +1,5 @@
 import random
+from random import uniform
 import time
 import os
 #thanks to everyone on stackoverflow and InvisibleOne and replit
@@ -10,15 +11,22 @@ bright_yellow = "\033[0;93m"
 purple = '\033[0;95m' 
 lives = 125
 coins = 13
-weapon_damage = 7
+#lel = random.uniform(0.1, 0.99) 
+weapon_damage = 7 #** lel
 monsters_killed = 0
+#def randuni():
+#  while attack == True:
+#    weapon_damage = 7 ** lel
+#    monsters_killed = 0
+#  else: 
+#    print(bright_red + "Failed" )
+
 def attack(bright_yellow, bright_blue, green,  bright_red):
   global coins
   global monsters_killed
   global weapon_damage
   global lives
   #global lel
-  #^ i had failed at making a random damage generator
   monster_life = random.randint(1,40)
   monster_damage = random.randint(1,25)
   attacking = True
@@ -47,9 +55,11 @@ def attack(bright_yellow, bright_blue, green,  bright_red):
       time.sleep(1)
       print(bright_yellow + "\nYou earned 7 coins!")
       monsters_killed += 1
+      os.system('clear')
       break
     else:
       input(bright_red + "\nPress [enter] to continue fighting")
+      os.system('clear')
 playing = True
 while playing == True:
   print(green + "\n[1] Attack")
@@ -57,7 +67,7 @@ while playing == True:
   print(bright_yellow + "\n[3] Coin Balance")
   print(bright_red + "\n[4] Lives")
   print(purple + "\n[5] Buy Lives")
-  print(bright_cyan + "")
+  print(bright_cyan + "") 
   choice = input()
   if choice == '1':
 	  attack(bright_yellow, bright_blue, green,  bright_red)
@@ -70,24 +80,29 @@ while playing == True:
       coins -= 7
       print(bright_yellow + "\nSpent 7 coins.")
       time.sleep(1)
+      os.system('clear')
     else:
       time.sleep(1)
       print(purple + "\nYou need more coins!!")
       time.sleep(1)
+      os.system('clear')
   elif choice == '3':
    coins = int(coins)
    time.sleep(1)
    print(bright_yellow + "\nYou have " + str(coins) + " coins!!")
    time.sleep(1)
+   os.system('clear')
   elif choice == '4':
     time.sleep(1)
     print(bright_red + "\nYou have " + str(lives) + " Lives")
     time.sleep(1)
+    os.system('clear')
   elif choice == '5':
     if coins <= 10:
       time.sleep(1)
       print(purple + "\nYou need more coins.")
       time.sleep(1)
+      os.system('clear')
     else:
       time.sleep(1)
       print(bright_red + "\nYou got another 10 lives!")
@@ -96,9 +111,9 @@ while playing == True:
       coins -= 10
       print(bright_yellow + "\nSpent 10 coins.")
       time.sleep(1)
+      os.system('clear')
   else:
    time.sleep(1)
    print(bright_red + "\nHey, that wasn't an option, please choose one or two...")
    time.sleep(1)
    os.system('clear')
-
