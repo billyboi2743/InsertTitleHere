@@ -6,4 +6,6 @@ Thanks to everyone on *replit* and *stackoverflow*, **especially** [InvisibleOne
 
 Enjoy!
 
+(*New Feature Soon! 👀*)
+
 *P.S the cover image is not for use anywhere else!!*
